@@ -27,9 +27,10 @@ public class MenuController {
   private final MenuRepository menuRepository;
 
   @Autowired
-  MenuController(CreateMenuService createMenuService, ListMenuService listMenuService) {
+  MenuController(CreateMenuService createMenuService, ListMenuService listMenuService,MenuRepository menuRepository ) {
     this.createMenuService = createMenuService;
     this.listMenuService = listMenuService;
+    this.menuRepository = menuRepository;
   }
 
   @GetMapping(path = "/menus", produces = "application/json")
