@@ -7,10 +7,10 @@ jobs:
     name: Outputdockercowsay
     steps:
     - uses: actions/checkout@v3 
-    - uses: juliangruber/read-file-action@v1
+    - uses: IlonaBaran/read-file-action@v1
       id: readme
       with:
-        path: ./README.md
+        path: README.md
     - uses: Code-Hex/neo-cowsay-action@v1
       with:
         message: "${{ steps.readme.outputs.cowsay }}"
