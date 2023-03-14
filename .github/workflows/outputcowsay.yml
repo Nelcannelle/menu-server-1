@@ -12,4 +12,5 @@ jobs:
       with:
         path: README.md
     - uses: Code-Hex/neo-cowsay-action@v1
-        echo "${{ steps.readme.outputs.cowsay }}"
+      with:
+        message: "${{ steps.readme.outputs.cowsay }}"
