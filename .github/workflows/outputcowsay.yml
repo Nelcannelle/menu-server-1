@@ -1,0 +1,15 @@
+name: Outputdockercowsay
+on:
+  - push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Outputdockercowsay
+    steps:
+    - uses: actions/checkout@v3 
+    - uses: juliangruber/read-file-action@v1
+      id: readme
+      with:
+        path: README.md
+    - uses: Code-Hex/neo-cowsay-action@v1
+        echo "${{ steps.readme.outputs.cowsay }}"
