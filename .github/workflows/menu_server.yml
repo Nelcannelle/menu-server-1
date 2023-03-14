@@ -1,6 +1,7 @@
 name: menu_server_intégration_continue
 on:
   - push
+  - pull_request
 jobs:
   menu_server_integration_continue:
     runs-on: ubuntu-22.04
