@@ -7,7 +7,7 @@ jobs:
     name: Outputdockercowsay
     steps:
     - uses: actions/checkout@v3 
-    - uses: IlonaBaran/read-file-action@v1
+    - uses: juliangruber/read-file-action@v1
       id: readme
       with:
         path: README.md
